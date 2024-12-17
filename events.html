@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Ecents : In javaScript ,events are actions or occurences that happen in the
+        system or within the DOM .
+    </h3>
+    <h4>Types of Events</h4>
+    <p>1.MouseEvents</p>
+    <button onclick="onClick()">Click me</button>
+    <div id="myDiv" style="width:100px;height:100px;background-color: red;"
+    onmouseover="onMouseOver()" onmouseout="onMouseOut()">Mouse</div>
+    <div id="myDiv1" style="width:100px;height:100px;background-color: blue;"
+    onmousedown="onMouseDown()" onmouseup="onMouseUp()">Mouse up and Down</div>
+    <p id="demo" onmousemove="onMouseMove()">on mouse move</p>
+    <hr>
+    <p>2.keyboard events</p>
+    <input type="text" id="up" onkeyup="onKeyUp()"/>
+    <input type="text" onkeydown="onKeyDown()">
+    <hr>
+    <p>3.Form Events</p>
+    <input type="text" id="focus" onfocus="onFocus()" placeholder="type something">
+    <form onsubmit="onSubmit()">
+        <input type="text" placeholder="Enter your name">
+        <button>submit</button>
+    </form>
+    
+</body>
+<script>
+    function onClick(){
+        alert("you have clicked me")
+        console.log("you clicked me")
+    }
+    function onMouseOver(){
+        console.log("you hover on me")
+        document.getElementById("myDiv").innerHTML="change text"
+    }
+    function onMouseOut(){
+        console.log("you are outside of div")
+        document.getElementById("myDiv").innerHTML="Outside of div"
+    }
+    function onMouseDown(){
+        console.log("on mouse down")
+    }
+    function onMouseUp(){
+        console.log("on mouse up")
+    }
+    function onMouseMove(){
+        console.log("ypu moved on the text")
+        document.getElementById("demo").style.backgroundColor="yellow"
+    }
+    function onKeyUp(){
+        console.log("you have passed the key")
+    }
+    function onKeyDown(){
+        alert("You have pressed a key")
+    }
+    function onFocus(){
+        document.getElementById("focus").style.backgroundColor="pink"
+    }
+    function onSubmit(){
+        alert("form submitted successfully")
+    }
+
+</script>
+</html>
